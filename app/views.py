@@ -6,7 +6,8 @@ def index():
     '''
     function that returns the index.html page and its content
     '''
-    return render_template('index.html')
+    title = 'News Live'
+    return render_template('index.html', title = title)
 
    #route to the articles.html page
 @app.route('/article/<article_id>')
