@@ -3,9 +3,10 @@ from .config import DevConfig
 
 
 #instance of flask
-app = Flask(__name__)
+app = Flask(__name__,codz_relative_config = True)
 
 #after importin Devconfig
 app.config.from_object(DevConfig)
+app.config.from_pyfile('config.py')
 
 from app import views

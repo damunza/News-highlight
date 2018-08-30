@@ -1,1 +1,16 @@
-<h1>this is just an initial test</h1>
+<!-- <h1>this is just an initial test</h1> -->
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    <h4>News Sources</h4>
+    <ul>
+      {% for source_item in source %}
+        <li>{{source_item.name}}</li>
+      {% endfor %}
+    </ul>
+  </body>
+</html>
