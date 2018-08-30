@@ -3,7 +3,7 @@ from .config import DevConfig
 
 
 #instance of flask
-app = Flask(__name__,codz_relative_config = True)
+app = Flask(__name__, instance_relative_config = True)
 
 #after importin Devconfig
 app.config.from_object(DevConfig)
