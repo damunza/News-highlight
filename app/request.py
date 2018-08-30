@@ -35,12 +35,13 @@ def process_results(source_list):
     '''
     source_results = []
     for source in source_list:
+        id = source.get('id')
         name = source.get('name')
         description = source.get('description')
         language = source.get('language')
 
         if name:
-            source_object =  Source(name,description,language)
+            source_object =  Source(id,name,description,language)
             source_results.append(source_object)
 
     return source_results
