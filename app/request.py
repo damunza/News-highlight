@@ -1,8 +1,9 @@
 from app import app
 import urllib.request,json
-from .models import source
+from .models import source, article
 
 Source = source.Source
+Article = article.Article
 
    #getting the apikey
 api_key = app.config['NEWS_API_KEY']
@@ -45,3 +46,40 @@ def process_results(source_list):
             source_results.append(source_object)
 
     return source_results
+
+def get_article(id):
+    '''
+    function to return response to the article json
+    '''
+    get_article_url = 'https://newsapi.org/v2/top-headlines?sources={}&apiKey={}'.format(id,api_key)
+    with urllib.request.urlopen(get_article_url) as url:
+        get_article_data = url.read()
+        get_article_response = json.loads(get_article_data)
+
+        article_results = None
+
+        if get_article_response['articles']:
+            article_results_list = get_article_response['articles']
+            article_results = process_articles(article_results_list)
+
+    return article_results
+
+      #processing the article json
+def process_articles(article_list):
+    '''
+    function to convert the article result into objects
+    '''
+    article_results = []
+    for article in article_list:
+        author = article.get('author')
+        title = article.get ('title')
+        description = article.get('description')
+        url = article.get('url')
+        image = article.get('urlToImage')
+        time = article.get('publishedAt')
+
+        if title:
+            article_object = Article(author,title,description,url,image,time)
+            article_results.append(article_object)
+
+    return article_results
