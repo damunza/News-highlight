@@ -83,3 +83,20 @@ def process_articles(article_list):
             article_results.append(article_object)
 
     return article_results
+
+def get_category(name):
+    '''
+    function that gets the response to the category json
+    '''
+    get_category_url = 'https://newsapi.org/v2/everything?q={}&sortBy=relevancy&apiKey={}'.format(name,api_key)
+    with urllib.request.urlopen(get_category_url) as url:
+        get_category_data = url.read()
+        get_cartegory_response = json.loads(get_category_data)
+
+        get_cartegory_results = None
+
+        if get_cartegory_response['articles']:
+            get_cartegory_list = get_cartegory_response['articles']
+            get_cartegory_results = process_articles(get_cartegory_list)
+
+    return get_cartegory_results
