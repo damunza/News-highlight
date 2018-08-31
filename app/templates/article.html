@@ -1,17 +1,14 @@
 <!-- <h1>{{id}}</h1> -->
-<!DOCTYPE html>
-<html lang="en" dir="ltr">
-  <head>
-    <meta charset="utf-8">
-    <title>{{title}}</title>
-  </head>
-  <body>
+{% extends 'base.html' %}
+
+{% block content %}
+
     <h3>Top News</h3>
     <ul>
       {% for article_item in article %}
         <div class="row">
           <div class="col-md-6 col-lg-6 col-xs-6 col-sm-6">
-            <img src="{{article_item.image}}" alt="news pic">
+            <img src="{{article_item.image}}" alt="news pic" style="height : 100px; width : 100px;">
           </div>
 
           <div class="col-md-6 col-lg-6 col-xs-6 col-sm-6">
@@ -25,6 +22,5 @@
 
 
       {% endfor %}
-    </ul>
-  </body>
-</html>
+
+{% endblock %}
