@@ -9,7 +9,10 @@
     <h4>Top News</h4>
     <ul>
       {% for article_item in article %}
-          <li>{{article_item.description}}</li>
+          <li>{{article_item.title}}
+                  <br>
+              {{article_item.description}}    
+          </li>
       {% endfor %}
     </ul>
   </body>
