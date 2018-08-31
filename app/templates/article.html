@@ -6,13 +6,24 @@
     <title>{{title}}</title>
   </head>
   <body>
-    <h4>Top News</h4>
+    <h3>Top News</h3>
     <ul>
       {% for article_item in article %}
-          <li>{{article_item.title}}
-                  <br>
-              {{article_item.description}}    
-          </li>
+        <div class="row">
+          <div class="col-md-6 col-lg-6 col-xs-6 col-sm-6"style="background-image: url({{article_item.image}})">
+
+          </div>
+
+          <div class="col-md-6 col-lg-6 col-xs-6 col-sm-6">
+            <h4>{{article_item.title}}</h4>
+            <p>{{article_item.description}} </p><br>
+            <a href="{{article_item.url}}"target="_blank">Read More</a>
+            <p>submitted:<i>{{article_item.time}}</i></p>
+          </div>
+
+        </div>
+
+
       {% endfor %}
     </ul>
   </body>

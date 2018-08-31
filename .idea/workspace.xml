@@ -1,10 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="6c856a14-373f-47fb-ae02-700a52e888c8" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/views.py" afterDir="false" />
-    </list>
+    <list default="true" id="6c856a14-373f-47fb-ae02-700a52e888c8" name="Default Changelist" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -47,7 +44,7 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/views.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="360">
@@ -70,10 +67,10 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/request.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="453">
+            <state relative-caret-position="184">
               <caret line="61" column="46" selection-start-line="61" selection-start-column="46" selection-end-line="61" selection-end-column="46" />
               <folding>
                 <element signature="e#0#19#0" expanded="true" />
@@ -314,21 +311,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/request.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="453">
-          <caret line="61" column="46" selection-start-line="61" selection-start-column="46" selection-end-line="61" selection-end-column="46" />
-          <folding>
-            <element signature="e#0#19#0" expanded="true" />
-            <marker date="1535637597513" expanded="true" signature="303:308" ph="..." />
-            <marker date="1535637597513" expanded="true" signature="304:308" ph="..." />
-            <marker date="1535637597513" expanded="true" signature="845:1289" ph="..." />
-            <marker date="1535637597513" expanded="true" signature="1310:1878" ph="..." />
-            <marker date="1535637597513" expanded="true" signature="1949:2499" ph="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/views.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="360">
@@ -337,6 +319,21 @@
             <element signature="e#0#33#0" expanded="true" />
             <marker date="1535631709207" expanded="true" signature="129:134" ph="..." />
             <marker date="1535631709207" expanded="true" signature="446:451" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/request.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="184">
+          <caret line="61" column="46" selection-start-line="61" selection-start-column="46" selection-end-line="61" selection-end-column="46" />
+          <folding>
+            <element signature="e#0#19#0" expanded="true" />
+            <marker date="1535637597513" expanded="true" signature="303:308" ph="..." />
+            <marker date="1535637597513" expanded="true" signature="304:308" ph="..." />
+            <marker date="1535637597513" expanded="true" signature="845:1289" ph="..." />
+            <marker date="1535637597513" expanded="true" signature="1310:1878" ph="..." />
+            <marker date="1535637597513" expanded="true" signature="1949:2499" ph="..." />
           </folding>
         </state>
       </provider>
