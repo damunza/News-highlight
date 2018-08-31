@@ -1,3 +1,4 @@
 virtual/
 *.pyc
 codz/
+__pycache__/
