@@ -1,9 +1,12 @@
 from flask import render_template
-from app import app
+from . import main
+from ..request import get_source,get_article,get_category
+# from ..models import Source, Article
+# from app import app
 
-from .request import get_source, get_article, get_category
+# from app.request import get_source, get_article, get_category
 
-@app.route('/')
+@main.route('/')
 def index():
     '''
     function that returns the index.html page and its content
@@ -14,7 +17,7 @@ def index():
     return render_template('index.html', title = title, source = source)
 
    #route to the articles.html page
-@app.route('/article/<article_id>')
+@main.route('/article/<article_id>')
 def article(article_id):
     '''
     function that returns the article.html page and its contect
@@ -24,7 +27,7 @@ def article(article_id):
     title = f'{article_id}'
     return render_template('article.html',id = article_id,title = title,article = article)
 
-@app.route('/category/<cat_name>')
+@main.route('/category/<cat_name>')
 def category(cat_name):
     '''
     function to return the category.html page and its content

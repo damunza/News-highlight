@@ -1,22 +1,32 @@
-from app import app
+# from config import Config
 import urllib.request,json
-from .models import source, article
+from .models import Source, Article
 
-Source = source.Source
-Article = article.Article
+#api_key as a variable
+api_key = None
 
-   #getting the apikey
-api_key = app.config['NEWS_API_KEY']
+#source url as a variable
+source_url = None
 
-   #getting the url
-source_url = app.config['NEWS_SOURCES_URL']
+def configure_request(app):
+    '''
+    function that takes the app instance and replaces the none variables to config objects
+    '''
 
-   #getting the json file
+    global api_key, source_url
+    # getting the apikey
+    api_key = app.config['NEWS_API_KEY']
+    # getting the url
+    source_url = app.config['NEWS_SOURCES_URL']
+
+
+#getting the json file
 def get_source():
     '''
     function to get the json response for the request made
     '''
     get_source_url = source_url.format(api_key)
+    print (get_source_url)
 
     with urllib.request.urlopen(get_source_url)as url:
         get_source_data = url.read()
